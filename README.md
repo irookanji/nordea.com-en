@@ -47,7 +47,7 @@ git clone https://github.com/irookanji/nordea.com-en
 2. Open directory: `nordea.com-en/` 
 3. In command line execute:
 * ```gradle test``` - executes all tests inside `nordea.com-en/src/test/java/tests/` with default browser set in config file
-* ```gradle test -Dremote.browser.url=selenoid.autotests.cloud``` - executes tests remotely in selenoid cloud
+* ```gradle test -Dremote.browser.url=selenoid.autotests.cloud``` - executes tests remotely in selenoid cloud can be seen [here](https://selenoid.autotests.cloud/#/) while running tests
 
 ## Framework Structure
 * Programming language – Java 11
@@ -79,6 +79,9 @@ Default browser is Chrome. To change browser, go to TestBase file => @BeforeAll 
 gradle -Dbrowser=browser_name test
 ```
 P.S. Didn't have a chance to configure and test Safari browser, however Chrome and Firefox are supported on both platforms
+
+## Jenkins job
+Jenkins job and the entire history of its launches can be found [here](https://jenkins.autotests.cloud/view/cohort_03/job/c03-g10-irookanji-nordea.com/)
 
 ## Results Reporting
 Every step is logged by Allure. It generates all actions performed by scripts to a separate html document and saves the entire history of running Jenkins tests.
