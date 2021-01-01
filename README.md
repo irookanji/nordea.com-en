@@ -1,5 +1,5 @@
 # Nordea Test Automation Framework
-This project automates for checking Main and Careers pages via https://www.nordea.com/en/ test scenario
+This project automates for checking Main and Careers pages via https://www.nordea.com/en/ test scenarios
 
 ## Table of Contents
 * [Tech Stack](https://github.com/irookanji/nordea.com-en#tech-stack-used)
@@ -25,7 +25,7 @@ This project automates for checking Main and Careers pages via https://www.norde
   
 ## Getting Started  
 Software to be pre-installed : 
-* JDK 8 - https://www.oracle.com/java/technologies/javase-jdk11-downloads.html
+* JDK 11 - https://www.oracle.com/java/technologies/javase-jdk11-downloads.html
 * Gradle - latest version here https://gradle.org/install
 ```
 note that both tools should be set to environment variables      
@@ -36,7 +36,7 @@ note that both tools should be set to environment variables
 git clone https://github.com/irookanji/nordea.com-en
 ```
 2. Open File -> New -> Project from Existing Source -> Select `../nordea.com-en/build.gradle` -> Click 'Next' every prompt
-3. Go to `nordea.com-en/src/test/java/tests/NordeaTests.java` -> click rmb -> click 'Run...' in context menu to execute all existing tests.
+3. Go to `nordea.com-en/src/test/java/tests/NordeaTests.java` -> click rmb -> click 'Run...' in context menu to execute all existing tests
 
 ## Running autotests from command line or terminal
 1. Clone repository
@@ -51,10 +51,10 @@ git clone https://github.com/irookanji/nordea.com-en
 ## Framework Structure
 * Programming language – Java 11
 * Page Object – Separate class for every web-page, that hold all functionality and members of that web-page using PageFactory pattern
-* Test base class: Deals with all the common functions used by all the pages, responsible for test launch, for reports, pre-cond post-cond, web-driver init, loading configs etc. 
+* Test base class: Deals with all the common functions used by all the pages, responsible for test launch, for reports, pre-cond post-cond, web-driver init, loading configs etc 
 * Packages: I have separate packages for Pages, Test steps and any other framework layer
-* Utility Functions: The code which is repetitive in nature such as waits, scroll actions, property loader, logging etc.
-* Helpers: This code (AttachmentsHelper) helps to catch attachments for a more detailed reports(logs, images, page source, video).
+* Utility Functions: The code which is repetitive in nature such as waits, scroll actions, property loader, logging etc
+* Helpers: This code (AttachmentsHelper) helps to catch attachments for a more detailed reports(logs, images, page source, video)
 * VCS: Git
 
 ## Test Layers
@@ -78,7 +78,7 @@ gradle -Dbrowser=browser_name test
 P.S. Didn't have a chance to configure and test Safari browser, however Chrome and Firefox are supported on both platforms
 
 ## Results Reporting
-Every step is logged by Allure. It generates all actions performed by scripts to a separate html document and saves the entire history of running Jenkins tests.
+Every step is logged by Allure. It generates all actions performed by scripts to a separate html document and saves the entire history of running Jenkins tests
 To browse Allure reports, go to:
 ```
 https://jenkins.autotests.cloud/view/cohort_03/job/c03-g10-irookanji-nordea.com/7/allure/      
