@@ -17,6 +17,7 @@ This project automates for checking Main and Careers pages via https://www.norde
 * Java 11 - coding
 * Gradle - project builder
 * JUnit5 - runner
+* Params - parameterized tests
 * Selenide - Selenium WebDriver wrapper
 * Allure - test reporting tool
 * Selenoid - a robust implementation of the Selenium Hub using Docker containers to launch browsers
@@ -52,6 +53,7 @@ git clone https://github.com/irookanji/nordea.com-en
 * Programming language – Java 11
 * Page Object – Separate class for every web-page, that hold all functionality and members of that web-page
 * Test base class: Deals with all the common functions used by all the pages, responsible for test launch, for reports, pre-cond post-cond, web-driver init, loading configs etc 
+* Params: Is parameterized tests. This feature enables us to execute a single test method multiple times with different parameters
 * Packages: I have separate packages for Pages, Tests and any other framework layer
 * Helpers: This code (AttachmentsHelper) helps to catch attachments for a more detailed reports(logs, images, page source, video)
 * Selenoid: Is a powerful implementation of Selenium Hub using Docker containers to launch browsers. When the test starts, the required container is created, the test is executed and the container is removed. Tests executed in docker containers are more stable. It was installed remotely.
