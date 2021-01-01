@@ -29,14 +29,15 @@ public class NordeaTests extends TestBase {
   @DisplayName("The main page correctly opened")
   void mainPageTest() {
 
-    // Assert
+    // Asserts
     $("title")
-        .shouldHave(attribute("text", "ordea Group – Nordic financial services | nordea.com "));
+        .shouldHave(attribute("text", "Nordea Group – Nordic financial services | nordea.com "));
+    $("img[alt*='Nordea logo']").shouldBe(Condition.visible);
   }
 
   @DisplayName("Menu is displayed")
   @ParameterizedTest
-  @ValueSource(strings = {"About ordea", "Careers", "Our services"})
+  @ValueSource(strings = {"About Nordea", "Careers", "Our services"})
   void checkMenuTabsNamesTest(String menu) {
 
     // Assert
