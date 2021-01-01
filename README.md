@@ -50,16 +50,17 @@ git clone https://github.com/irookanji/nordea.com-en
 
 ## Framework Structure
 * Programming language – Java 11
-* Page Object – Separate class for every web-page, that hold all functionality and members of that web-page using PageFactory pattern
+* Page Object – Separate class for every web-page, that hold all functionality and members of that web-page
 * Test base class: Deals with all the common functions used by all the pages, responsible for test launch, for reports, pre-cond post-cond, web-driver init, loading configs etc 
-* Packages: I have separate packages for Pages, Test steps and any other framework layer
-* Utility Functions: The code which is repetitive in nature such as waits, scroll actions, property loader, logging etc
+* Packages: I have separate packages for Pages, Tests and any other framework layer
 * Helpers: This code (AttachmentsHelper) helps to catch attachments for a more detailed reports(logs, images, page source, video)
+* Selenoid: Is a powerful implementation of Selenium Hub using Docker containers to launch browsers. When the test starts, the required container is created, the test is executed and the container is removed. Tests executed in docker containers are more stable. It was installed remotely.
+* Jenkins: I have configured Jenkins job to build tests in Selenoid and reporting with Allure report tool (Allure plugin was connected). Jenkins is also hosted remotely. It can be configured the tests execution on a schedule.
 * VCS: Git
 
 ## Test Layers
 * Pages(web-pages and elements)
-* Test steps(logic implementation)
+* Tests (logic implementation)
 * Test launch(runners)
 * Test data(feature files)
 
@@ -78,7 +79,7 @@ gradle -Dbrowser=browser_name test
 P.S. Didn't have a chance to configure and test Safari browser, however Chrome and Firefox are supported on both platforms
 
 ## Results Reporting
-Every step is logged by Allure. It generates all actions performed by scripts to a separate html document and saves the entire history of running Jenkins tests
+Every step is logged by Allure. It generates all actions performed by scripts to a separate html document and saves the entire history of running Jenkins tests.
 To browse Allure reports, go to:
 ```
 https://jenkins.autotests.cloud/view/cohort_03/job/c03-g10-irookanji-nordea.com/7/allure/      
