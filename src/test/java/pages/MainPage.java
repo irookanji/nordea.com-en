@@ -15,22 +15,22 @@ public class MainPage {
   private SelenideElement menu = $("[data-wa-component=menu] nav[role=navigation]");
   private SelenideElement careersButton = $("[data-wa-menu-1=Careers]");
 
-  @Step
+  @Step("Accept cookie")
   public void acceptCookie() {
     acceptCookieButton.click();
   }
 
-  @Step
+  @Step("Open main page")
   public static MainPage open() {
     return Selenide.open(URL, MainPage.class);
   }
 
-  @Step
+  @Step("Check menu is displayed")
   public SelenideElement findByNameInMenu(String name) {
     return menu.find(Selectors.byText(name));
   }
 
-  @Step
+  @Step("Open Careers page")
   public CareersPage goToCareersPage() {
     careersButton.click();
     return new CareersPage();

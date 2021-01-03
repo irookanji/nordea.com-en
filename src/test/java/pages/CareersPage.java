@@ -21,30 +21,30 @@ public class CareersPage {
   private SelenideElement jobTitle =
       $x("//tr[@class='job-item']//a[contains(text(),'Senior QA Engineer, Stockholm')]");
 
-  @Step
+  @Step("Choose country")
   public void chooseCountry() {
     chooseCountryDropDown.click();
     countrySelect.click();
   }
 
-  @Step
+  @Step("Choose city")
   public void chooseCity() {
     chooseCityDropDown.click();
     citySelect.click();
   }
 
-  @Step
+  @Step("Choose Career Area")
   public void chooseCareerArea() {
     chooseCareerAreaDropDown.click();
     careerAreaSelect.click();
   }
 
-  @Step
+  @Step("Click Search button")
   public void clickSearchButton() {
     searchButton.click();
   }
 
-  @Step
+  @Step("Choose job title")
   public void chooseJobTitle() {
     jobTitle.click();
   }
