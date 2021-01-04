@@ -35,7 +35,7 @@ public class NordeaTests extends TestBase {
     $("img[alt*='Nordea logo']").shouldBe(Condition.visible);
   }
 
-  @DisplayName("Menu is displayed")
+  @DisplayName("Menu tabs are visible")
   @ParameterizedTest
   @ValueSource(strings = {"About Nordea", "Careers", "Our services"})
   void checkMenuTabsNamesTest(String menu) {

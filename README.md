@@ -9,6 +9,7 @@ This project automates for checking Main and Careers pages via https://www.norde
 * [Framework Structure](https://github.com/irookanji/nordea.com-en#framework-structure)
 * [Test Layers](https://github.com/irookanji/nordea.com-en#test-layers)
 * [Supported Browsers](https://github.com/irookanji/nordea.com-en#tests-support-cross-platform-browser-testing)
+* [Jenkins job](https://github.com/irookanji/nordea.com-en#jenkins-job)
 * [Results Reporting](https://github.com/irookanji/nordea.com-en#results-reporting)
 * [Code Design](https://github.com/irookanji/nordea.com-en#code-design)
 * [License](https://github.com/irookanji/nordea.com-en#license)
