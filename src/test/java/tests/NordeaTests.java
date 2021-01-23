@@ -28,7 +28,6 @@ public class NordeaTests extends TestBase {
   @Test
   @DisplayName("The main page correctly opened")
   void mainPageTest() {
-
     // Asserts
     $("title")
         .shouldHave(attribute("text", "Nordea Group – Nordic financial services | nordea.com "));
@@ -39,7 +38,6 @@ public class NordeaTests extends TestBase {
   @ParameterizedTest
   @ValueSource(strings = {"About Nordea", "Careers", "Our services"})
   void checkMenuTabsNamesTest(String menu) {
-
     // Assert
     mainPage.findByNameInMenu(menu).shouldBe(Condition.visible);
   }
@@ -47,7 +45,6 @@ public class NordeaTests extends TestBase {
   @Test
   @DisplayName("Job selection search is working correctly")
   void findJobPositionTest() {
-
     careersPage = mainPage.goToCareersPage();
     careersPage.chooseCountry();
     careersPage.chooseCity();
@@ -62,7 +59,6 @@ public class NordeaTests extends TestBase {
   @Test
   @DisplayName("The required vacancy opens")
   void checkJobDetailsTest() {
-
     careersPage = mainPage.goToCareersPage();
     careersPage.chooseCountry();
     careersPage.chooseCity();
