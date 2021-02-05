@@ -8,18 +8,17 @@ import static com.codeborne.selenide.Selenide.$x;
 
 public class CareersPage {
 
-  private SelenideElement chooseCountryDropDown = $("#job-search-select-cty");
-  private SelenideElement countrySelect =
-      $x("//select[@id='job-search-select-cty']//option[contains(text(), 'Sweden')]");
-  private SelenideElement chooseCityDropDown = $("#job-search-select-geo");
-  private SelenideElement citySelect =
-      $x("//select[@id='job-search-select-geo']//option[contains(text(), 'Stockholm')]");
-  private SelenideElement chooseCareerAreaDropDown = $("#job-search-select-area");
-  private SelenideElement careerAreaSelect =
-      $x("//select[@id='job-search-select-area']//option[contains(text(), 'IT')]");
-  private SelenideElement searchButton = $x("//button[contains(text(),'Search')]");
-  private SelenideElement jobTitle =
-      $x("//tr[@class='job-item']//a[contains(text(),'Senior QA Engineer, Stockholm')]");
+  private SelenideElement chooseCountryDropDown = $("#job-search-select-cty"),
+      countrySelect =
+          $x("//select[@id='job-search-select-cty']//option[contains(text(), 'Sweden')]"),
+      chooseCityDropDown = $("#job-search-select-geo"),
+      citySelect =
+          $x("//select[@id='job-search-select-geo']//option[contains(text(), 'Stockholm')]"),
+      chooseCareerAreaDropDown = $("#job-search-select-area"),
+      careerAreaSelect =
+          $x("//select[@id='job-search-select-area']//option[contains(text(), 'IT')]"),
+      searchButton = $x("//button[contains(text(),'Search')]"),
+      jobTitle = $x("//tr[@class='job-item']//a[contains(text(),'Senior QA Engineer, Stockholm')]");
 
   @Step("Choose country")
   public void chooseCountry() {

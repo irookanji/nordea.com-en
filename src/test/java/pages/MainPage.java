@@ -11,9 +11,9 @@ import static com.codeborne.selenide.Selenide.$x;
 public class MainPage {
   private static final String URL = "https://www.nordea.com/en/";
 
-  private SelenideElement acceptCookieButton = $x("//a[contains(text(),'Accept all cookies')]");
-  private SelenideElement menu = $("[data-wa-component=menu] nav[role=navigation]");
-  private SelenideElement careersButton = $("[data-wa-menu-1=Careers]");
+  private SelenideElement acceptCookieButton = $x("//a[contains(text(),'Accept all cookies')]"),
+      menu = $("[data-wa-component=menu] nav[role=navigation]"),
+      careersButton = $("[data-wa-menu-1=Careers]");
 
   @Step("Accept cookie")
   public void acceptCookie() {
